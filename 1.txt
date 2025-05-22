@@ -1,0 +1,74 @@
+What are tensors?
+
+Tensors are a generalization of matrices to higher dimensions. They are the fundamental data structure in PyTorch and are used to encode inputs, outputs, and model parameters. Tensors can be thought of as multi-dimensional arrays and support operations such as addition, multiplication, and 
+more, often leveraging GPUs for acceleration.
+
+
+
+Types of Tensors and there examples
+
+1. FloatTensor: A tensor with floating-point numbers.
+    Example: torch.FloatTensor([1.0, 2.0, 3.0])
+
+2. IntTensor: A tensor with integer numbers.
+    Example: torch.IntTensor([1, 2, 3])
+
+3. BoolTensor: A tensor with boolean values.
+    Example: torch.BoolTensor([True, False, True])
+
+4. DoubleTensor: A tensor with double-precision floating-point numbers.
+    Example: torch.DoubleTensor([1.0, 2.0, 3.0])
+
+5. LongTensor: A tensor with 64-bit integer numbers.
+    Example: torch.LongTensor([1, 2, 3])
+
+
+
+Dimensions of Tensors and examples
+
+1. Scalar (0-D Tensor): A tensor with zero dimensions, representing a single value.
+    Example: torch.tensor(42)
+
+2. Vector (1-D Tensor): A tensor with one dimension, representing a list of values.
+    Example: torch.tensor([1, 2, 3])
+
+3. Matrix (2-D Tensor): A tensor with two dimensions, representing a 2D grid of values.
+    Example: torch.tensor([[1, 2], [3, 4]])
+
+4. 3-D Tensor: A tensor with three dimensions, often used to represent a stack of matrices.
+    Example: torch.tensor([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+5. n-D Tensor: A tensor with n dimensions, where n > 3, used for higher-dimensional data.
+    Example: torch.randn(2, 3, 4, 5)  # A 4-D tensor with random values
+
+
+
+Why are Tensors used?
+
+Tensors are used because they provide a flexible and efficient way to represent and manipulate data in machine learning and deep learning. They allow for:
+
+1. GPU Acceleration: Tensors can leverage GPUs for faster computation, making them ideal for large-scale data processing.
+
+2. Automatic Differentiation: PyTorch tensors support automatic differentiation, which is essential for training neural networks.
+
+3. Multi-Dimensional Data Representation: Tensors can represent data of any dimensionality, making them versatile for various applications like images, videos, and sequences.
+
+4. Mathematical Operations: Tensors support a wide range of mathematical operations, enabling complex computations required in machine learning.
+
+5. Interoperability: Tensors can be easily converted to and from NumPy arrays, facilitating integration with other scientific computing tools.
+
+
+
+What is Autograd in PyTorch?explain
+
+Autograd is PyTorch's automatic differentiation engine that powers neural network training. It tracks all operations performed on tensors with `requires_grad=True` and automatically computes gradients during backpropagation. This is essential for optimizing model parameters.
+
+Key Features of Autograd:
+
+1. Gradient Calculation: Autograd computes gradients for tensor operations, enabling optimization algorithms like gradient descent.
+
+2. Dynamic Computation Graph: PyTorch builds a dynamic computation graph during runtime, allowing flexibility in model design and debugging.
+
+3. Backward Propagation: The `.backward()` method computes gradients for all tensors in the computation graph.
+
+Example:
